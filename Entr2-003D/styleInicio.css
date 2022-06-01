@@ -1,3 +1,4 @@
+/*Nav*/
 .nav-item {
     font-family: 'Tiro Telugu', serif;
     font-size: 19px;
@@ -5,4 +6,25 @@
 
 .navbar {
     box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.1);
+}
+
+/*Imagen Empresa*/
+.ImagenEmp {
+    display: flex;
+    justify-content: center;
+}
+
+.ImagenEmp img{
+    width: 100%;
+    max-width: 1200px;
+}
+
+/*Info Electric Wheels*/
+.TituloIn {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.ms-4 h3{
+    font-family: 'Merriweather', serif;
 }
