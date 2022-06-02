@@ -11,6 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@1&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#formulario").hide();
+            $("#btn_ocultar").click(function()
+            {
+                $("#formulario").hide();
+            });
+            $("#btn_mostrar").click(function(){
+                $("#formulario").show();
+            });
+        });
+    </script>
+
 </head>
 <body>
     <!--Color de fondo-->
@@ -48,10 +63,6 @@
                 <a style="color: rgb(33, 31, 31);" class="nav-link active" aria-current="page" href="#fotteer">Información</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-dark btn-sm" type="submit">Buscar</button>
-            </form>
             <a class="navbar-brand" href="indexInicio.html">
               <img src="ImgInicio/Contacto.png" alt="" width="150" class="d-inline-block align-text-center">                                                                         
             </a>
@@ -60,39 +71,47 @@
 
     <!--Formulario-->
     <div class="container w-75 bg-primary mt-5 rounded shadow">
-        <div class="row align-items-stretch">
-            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
-
-            </div>
-            <div class="col bg-white p-5 rounded-end">
-                
-                <h2 class="fw-bold text-center py-5">Bienvenido</h2>
-            
-                <form action="#">
-                    <div class="mb-4">
-                        <label for="email" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" name="email">
+      <div class="row align-items-stretch">
+          <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+          </div>
+          <div class="col bg-white p-5 rounded-end">
+              
+              <h2 class="fw-bold text-center py-5">Bienvenido</h2>
+          
+              <form action="#" method="post" id="formulario" name="formulario">
+                <div class="row g-3">
+                    <div class="col-xs-12 col-sm-6">
+                        Rut
+                        <input type="text" class="form-control" name="txt_rut" id="txt_rut">
+                        Teléfono
+                        <input type="text" class="form-control" name="txt_telefono" id="txt_telefono"> 
+                        Nombre
+                        <input type="text" class="form-control" name="txt_nombre" id="txt_nombre"> 
+                        Apellido
+                        <input type="text" class="form-control" name="txt_apellido" id="txt_apellido"> <br>
+                        Género <br>
+                        <input type="radio" id="rbt_genero" name="rbt_genero" value="M" required>Masculino <br>
+                        <input type="radio" id="rbt_genero" name="rbt_genero" value="F" required>Femenino <br><br>
+                        Fecha de nacimiento <br>
+                        <input type="date" id="fecha" name="fecha" required> <br><br>
+                        Comentario <br>
+                        <textarea name="txa_comentarios" id="txa_comentarios" cols="30" rows="5"></textarea>
                     </div>
-                    <div class="mb-4">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="password">
+                    <div class="col-xs-12">
+                        <input type="button" class="btn btn-primary" value="Enviar" id="btn_enviar" onclick="javascript:void(validar())">
+                        <input type="button" class="btn btn-danger" value="Limpiar" id="btn_limpiar">
                     </div>
-                    <div class="mb-4">
-                        <input type="checkbox" name="connected" class="form-check-input">
-                        <label for="connected" class="form-check-label">Recordar usuario</label>
-                    </div>
-
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    </div>
-
-                    <div class="my-3">
-                        <span>No tienes cuenta? <a href="indexRegistro.html">Regístrate</a></span> <br>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> <br><br>
+                </div>
+              </form>
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6"><br>
+                      <input type="button" class="btn btn-primary" value="Mostrar" id="btn_mostrar">
+                      <input type="button" class="btn btn-primary" value="Ocultar" id="btn_ocultar">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> <br><br>
 
     <!--FOOTER-->
   <footer style="background: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9));"> <br>
