@@ -1,0 +1,35 @@
+/*Nav*/
+.nav-item {
+    font-family: 'Tiro Telugu', serif;
+    font-size: 19px;
+}
+
+.navbar {
+    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.1);
+}
+
+/*Formulario*/
+.bg {
+    background-image: url(ImgForm/Fabrica.jpg);
+    background-position: center center;
+}
+
+.nav-item {
+    font-family: 'Tiro Telugu', serif;
+    font-size: 19px;
+}
+
+.navbar {
+    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.1);
+}
+
+/*FOOTER*/
+.cont {
+    color: #fff;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.vid {
+    text-align: center;
+}
