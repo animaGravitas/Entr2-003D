@@ -1,29 +1,23 @@
 function validar()
 {
-   var rut = document.formulario.txt_rut 
+   var rut = document.formulario.txt_rut.value 
    var telefono = document.formulario.txt_telefono.value
    var nombre = document.formulario.txt_nombre.value
    var apellido = document.formulario.txt_apellido.value
-   var comentario = document.formulario.txa_comentarios
-   
-   // Atributos con menos de tres caracteres
-   if (nombre.length<3)
+   var comentario = document.formulario.txa_comentarios.value
+
+   var genero = ""
+   var generoM = document.formulario.rbt_generoM.value
+   var generoF = document.formulario.rbt_generoF.value
+
+   var fecha = document.formulario.fecha.value
+
+   if(generoM.checked)
    {
-       alert("Nombre debe tener al menos 3 caracteres")
-       document.formulario.txt_nombre.focus();
-       return false;
+       genero = generoM
    }
-   if (apellido.length<3)
-   {
-       alert("Apellido debe tener al menos 3 caracteres")
-       document.formulario.txt_apellido.focus();
-       return false;
-   }
-   if (comentario.length<3)
-   {
-       alert("Comentario debe tener al menos 3 caracteres")
-       document.formulario.txa_comentarios.focus()
-       return false;
+   else{
+       genero = generoF
    }
 
    // Validación del Rut
@@ -84,5 +78,31 @@ function validar()
         return false;
    }
 
-   alert("")
+   // Atributos con menos de tres caracteres
+   if (nombre.length<3)
+   {
+       alert("Nombre debe tener al menos 3 caracteres")
+       document.formulario.txt_nombre.focus();
+       return false;
+   }
+   if (apellido.length<3)
+   {
+       alert("Apellido debe tener al menos 3 caracteres")
+       document.formulario.txt_apellido.focus();
+       return false;
+   }
+   if (comentario.length<3)
+   {
+       alert("Comentario debe tener al menos 3 caracteres")
+       document.formulario.txa_comentarios.focus()
+       return false;
+   }
+
+    alert("Rut: " + rut + 
+          " Teléfono: " + telefono + 
+          " Nombre: " + nombre +
+          " Apellido: " + apellido +
+          " Género: " + genero + 
+          " Fecha de nacimiento: " + fecha + 
+          " Comentario: " + comentario)
 }

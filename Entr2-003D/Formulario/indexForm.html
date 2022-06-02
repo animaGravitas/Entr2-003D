@@ -27,6 +27,14 @@
         });
     </script>
 
+    <script>
+      function limpiar()
+      {
+        formulario.reset()
+        return false
+      }
+    </script>
+
 </head>
 <body>
     <script type="text/javascript" src="Validar.js"></script>
@@ -56,14 +64,11 @@
                 <a style="color: rgb(33, 31, 31);" class="nav-link active" aria-current="page" href="#">Inicio</a>
               </li>
               <li class="nav-item">
-                <a style="color: rgb(33, 31, 31);" class="nav-link active" aria-current="page" href="#/E">Electric Wheels</a>
-              </li>
-              <li class="nav-item">
-                <a style="color: rgb(33, 31, 31);" class="nav-link active" aria-current="page" href="#galeriaIni">Vehículos</a>
-              </li>
-              <li class="nav-item">
                 <a style="color: rgb(33, 31, 31);" class="nav-link active" aria-current="page" href="#fot">Información</a>
               </li>
+              <form action="../indexInicio.html">
+                <button class="btn btn-outline-dark btn-sm" type="submit">Volver</button>
+              </form>
             </ul>
         </div>
     </nav>
@@ -81,16 +86,16 @@
                 <div class="row g-3">
                     <div class="col-xs-12 col-sm-6">
                         Rut
-                        <input type="text" class="form-control" name="txt_rut" id="txt_rut">
+                        <input type="text" class="form-control" name="txt_rut" id="txt_rut" required>
                         Teléfono
-                        <input type="text" class="form-control" name="txt_telefono" id="txt_telefono"> 
+                        <input type="text" class="form-control" name="txt_telefono" id="txt_telefono" required> 
                         Nombre
                         <input type="text" class="form-control" name="txt_nombre" id="txt_nombre"> 
                         Apellido
                         <input type="text" class="form-control" name="txt_apellido" id="txt_apellido"> <br>
                         Género <br>
-                        <input type="radio" id="rbt_genero" name="rbt_genero" value="M" required>Masculino <br>
-                        <input type="radio" id="rbt_genero" name="rbt_genero" value="F" required>Femenino <br><br>
+                        <input type="radio" id="rbt_generoM" name="rbt_generoM" value="Masculino" required>Masculino <br>
+                        <input type="radio" id="rbt_generoF" name="rbt_generoF" value="Femenino" required>Femenino <br><br>
                         Fecha de nacimiento <br>
                         <input type="date" id="fecha" name="fecha" required> <br><br>
                         Comentario <br>
@@ -98,7 +103,7 @@
                     </div>
                     <div class="col-xs-12">
                         <input type="button" class="btn btn-primary" value="Enviar" id="btn_enviar" onclick="javascript:void(validar())">
-                        <input type="button" class="btn btn-danger" value="Limpiar" id="btn_limpiar">
+                        <input type="button" class="btn btn-danger" value="Limpiar" id="btn_limpiar" onclick="return limpiar();">
                     </div>
                 </div>
               </form>
