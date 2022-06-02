@@ -25,6 +25,53 @@
     font-family: 'Merriweather', serif;
 }
 
-.ms-4 h3{
+.Texto p{
+    column-count: 2;
+    text-align: left;
+    font-family: 'Tiro Telugu', serif;
+    font-size: 20px;
+}
+
+/*Galería división*/
+#galeriaDiv {
+    background: linear-gradient(rgba(81, 193, 249, 0.85), rgba(106, 236, 245, 0.85)), url(ImgInicio/Fabrica.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#galeriaDiv h1 {
+    color: #fff;
     font-family: 'Merriweather', serif;
+    font-size: 70px;
+}
+
+/*Galería*/
+.service {
+    padding: 32px;
+    background: linear-gradient(rgba(81, 193, 249, 0.85), rgba(106, 236, 245, 0.85)), url(ImgInicio/Fabrica.jpg);
+    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.1);
+}
+
+.service h1 {
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-family: 'Merriweather', serif;
+    font-size: 23px;
+
+}
+
+.service img {
+    width: 330px;
+}
+
+/*FOOTER*/
+.cont {
+    color: #fff;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.vid {
+    text-align: center;
 }
