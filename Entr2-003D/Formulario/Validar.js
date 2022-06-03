@@ -1,6 +1,6 @@
 function validar()
 {
-   var rut = document.formulario.txt_rut.value 
+   var rut = document.formulario.txt_rut.value
    var telefono = document.formulario.txt_telefono.value
    var nombre = document.formulario.txt_nombre.value
    var apellido = document.formulario.txt_apellido.value
@@ -18,6 +18,32 @@ function validar()
    }
    else{
        genero = generoF
+   }
+
+   // Validación de campo obligatorio
+   if (rut.length == 0)
+   {
+        alert("RUT es un campo obligatorio")
+        document.formulario.txt_rut.focus()
+        return false;
+   }
+   if (telefono.length == 0)
+   {
+        alert("Número de telefono es un campo obligatorio")
+        document.formulario.txt_telefono.focus()
+        return false;
+   }
+   if (generoM.checked == false && generoF.checked == false)
+   {
+        alert("El campo Género es obligatorio")
+        document.formulario.rbt_generoM.focus()
+        return false;
+   }
+   if (fecha.length == 0)
+   {
+        alert("La fecha es obligatoria")
+        document.formulario.fecha.focus()
+        return false;
    }
 
    // Validación del Rut
